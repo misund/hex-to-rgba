@@ -1,12 +1,12 @@
 
-Turns an old-fashioned css hex color value into a rgb color value.
+'hex-to-rgba' turns an old-fashioned css hex color value string into a rgb() string.
 
-If you specify an alpha value, you'll get a rgba() value instead.
+If you specify an alpha value, you'll get a rgba() string instead.
 
-==Install==
+## Install
 `$ npm install --save hex-to-rgba`
 
-==Usage==
+## Usage
 ```
 var hexToRgba = require("hex-to-rgba");
 
@@ -18,9 +18,9 @@ hexToRgba('123'); // "rgb(17, 34, 51)"
 hexToRgba('#123'); // "rgb(17, 34, 51)"
 ```
 
-==Parameters==
+## Parameters
 hex: The hex value to convert. ('123456'. '#123456', ''123', '#123')
 a: An alpha value to apply. (optional) ('0.5', 0.25)
 
-==Returns==
+## Returns
 An rgb or rgba value. ('rgb(11, 22, 33)', 'rgba(11, 22, 33, 0.5)')
