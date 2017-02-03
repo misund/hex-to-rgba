@@ -5,7 +5,7 @@ If you specify an alpha value, you'll get a rgba() string instead.
 
 ## Install
 ```sh
-npm install --save hex-to-rgba
+$ npm install --save hex-to-rgba
 ```
 ## Usage
 ```js
