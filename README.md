@@ -26,8 +26,8 @@ hexToRgba('#123', 0.2) // "rgba(17, 34, 51, 0.2)"
 `(hex, a = '')`
 
 ## Parameters
-* hex: The hex value to convert. (examples: '123456', '#123456', ''123', '#123')
-* a: An alpha value to apply. (optional) (examples: '0.5', 0.25)
+* `hex`: The hex value to convert. (examples: '123456', '#123456', ''123', '#123')
+* `a`: An alpha value to apply. (optional) (examples: '0.5', 0.25)
 
 ## Returns
 An rgb or rgba value. (examples: 'rgb(11, 22, 33)', 'rgba(11, 22, 33, 0.5)')
