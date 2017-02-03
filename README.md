@@ -4,7 +4,7 @@
 If you specify an alpha value, you'll get a rgba() string instead.
 
 ## Install
-```bash
+```sh
 npm install --save hex-to-rgba
 ```
 ## Usage
