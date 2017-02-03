@@ -4,10 +4,11 @@
 If you specify an alpha value, you'll get a rgba() string instead.
 
 ## Install
-`$ npm install --save hex-to-rgba`
-
-## Usage
+```bash
+$ npm install --save hex-to-rgba
 ```
+## Usage
+```js
 var hexToRgba = require("hex-to-rgba");
 
 hexToRgba('112233', '0.5'); // "rgba(17, 34, 51, 0.5)"
@@ -19,8 +20,8 @@ hexToRgba('#123'); // "rgb(17, 34, 51)"
 ```
 
 ## Parameters
-hex: The hex value to convert. ('123456'. '#123456', ''123', '#123')
-a: An alpha value to apply. (optional) ('0.5', 0.25)
+* hex: The hex value to convert. ('123456'. '#123456', ''123', '#123')
+* a: An alpha value to apply. (optional) ('0.5', 0.25)
 
 ## Returns
 An rgb or rgba value. ('rgb(11, 22, 33)', 'rgba(11, 22, 33, 0.5)')
