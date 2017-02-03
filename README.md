@@ -1,5 +1,5 @@
 
-'hex-to-rgba' turns an old-fashioned css hex color value string into a rgb() string.
+`hex-to-rgba` turns an old-fashioned css hex color value string into an rgb() string.
 
 If you specify an alpha value, you'll get a rgba() string instead.
 
