@@ -7,7 +7,7 @@
  * @param An alpha value to apply. (optional) ('0.5', '0.25')
  * @return An rgb or rgba value. ('rgb(11, 22, 33)'. 'rgba(11, 22, 33, 0.5)')
  */
-const hexToRgba = (hex, a = '') => {
+const hexToRgba = function(hex, a) {
   const fixHex = (hex) => {
     let newHex = hex.startsWith('#') ? hex.slice(1) : hex;
 
@@ -22,9 +22,7 @@ const hexToRgba = (hex, a = '') => {
   const g = parseInt((fixHex(hex)).substring(2, 4), 16);
   const b = parseInt((fixHex(hex)).substring(4, 6), 16);
 
-  const rgba = a ? `rgba(${r}, ${g}, ${b}, ${a})` : `rgb(${r}, ${g}, ${b})`;
-
-  return rgba;
+  return typeof a !== 'undefined' ? `rgba(${r}, ${g}, ${b}, ${a})` : `rgb(${r}, ${g}, ${b})`;
 };
 
 module.exports = hexToRgba;
