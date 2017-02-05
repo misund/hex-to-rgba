@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/misund/hex-to-rgba.svg?branch=master)](https://travis-ci.org/misund/hex-to-rgba)
 
 `hex-to-rgba` turns an old-fashioned css hex color value string into an rgb() string.
 
