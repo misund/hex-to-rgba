@@ -23,7 +23,7 @@ hexToRgba('#123', 0.2) // "rgba(17, 34, 51, 0.2)"
 ```
 
 ## Signature
-`(hex, a = '')`
+`hexToRgba(hex, a)`
 
 ## Parameters
 * `hex`: The hex value to convert. (examples: `'123456'`, `'#123456'`, `'123'`, `'#123'`)
