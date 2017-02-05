@@ -5,7 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "build": "babel src -d build",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build && npm test",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"
   },
   "repository": {
