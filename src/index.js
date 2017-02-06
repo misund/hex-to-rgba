@@ -15,14 +15,21 @@ const hexToRgba = function(hex, a) {
       newHex = `${newHex.slice(0, 1)}${newHex.slice(0, 1)}${newHex.slice(1, 2)}${newHex.slice(1, 2)}${newHex.slice(2, 3)}${newHex.slice(2, 3)}`;
     }
 
+
     return newHex;
   };
 
-  const r = parseInt((fixHex(hex)).substring(0, 2), 16);
-  const g = parseInt((fixHex(hex)).substring(2, 4), 16);
-  const b = parseInt((fixHex(hex)).substring(4, 6), 16);
+  const newHex = fixHex(hex);
+  const r = parseInt(newHex.substring(0, 2), 16);
+  const g = parseInt(newHex.substring(2, 4), 16);
+  const b = parseInt(newHex.substring(4, 6), 16);
+  let o = a;
 
-  return typeof a !== 'undefined' ? `rgba(${r}, ${g}, ${b}, ${a})` : `rgb(${r}, ${g}, ${b})`;
+  if ( newHex.length === 8) {
+    o = +((parseInt(newHex.substring(6, 8), 16)/255).toFixed(2));
+  }
+
+  return !isNaN(parseFloat(o)) ? `rgba(${r}, ${g}, ${b}, ${o})` : `rgb(${r}, ${g}, ${b})`;
 };
 
 module.exports = hexToRgba;
