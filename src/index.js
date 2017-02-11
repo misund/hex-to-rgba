@@ -25,7 +25,7 @@ const hexToRgba = function(hex, a) {
   const b = parseInt(newHex.substring(4, 6), 16);
 
   let o;
-  if ( newHex.length === 8) {
+  if (newHex.length === 8) {
     o = +((parseInt(newHex.substring(6, 8), 16)/255).toFixed(2));
   }
   o = isNumeric(a) ? a : o;
