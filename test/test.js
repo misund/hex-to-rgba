@@ -82,9 +82,9 @@ describe('hex-to-rgba', function() {
     });
   });
 
-  describe.skip('8-digit hex values, no a', function() {
+  describe('8-digit hex values, no a', function() {
     it('should calculate correct rgb values', function() {
-      assert.equal('rgba(17, 34, 51, 0.27 )', hexToRgba('11223344'));
+      assert.equal('rgba(17, 34, 51, 0.27)', hexToRgba('11223344'));
     });
 
     it('should ignore a leading hash sign', function() {
@@ -92,7 +92,7 @@ describe('hex-to-rgba', function() {
     });
 
     it('should remove trailing zeros', function() {
-      assert.equal('rgba(17, 34, 51, 0.5 )', hexToRgba('1122337f'));
+      assert.equal('rgba(17, 34, 51, 0.5)', hexToRgba('1122337f'));
     });
 
     it('should handle the edge case where alpha value is 1', function() {
@@ -105,7 +105,7 @@ describe('hex-to-rgba', function() {
 
   });
 
-  describe.skip('8-digit hex values, a as parameter (separate parameter should override alpha in hex)', function() {
+  describe('8-digit hex values, a as parameter (separate parameter should override alpha in hex)', function() {
     it('should calculate rgba values from hex and string alpha value', function() {
       assert.equal('rgba(17, 34, 51, 0.5)', hexToRgba('11223344', '0.5'));
     })
