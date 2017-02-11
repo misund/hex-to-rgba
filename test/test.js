@@ -105,7 +105,7 @@ describe('hex-to-rgba', function() {
 
   });
 
-  describe.skip('8-digit hex values, a as parameter (separate parameter should override alpha in hex)', function() {
+  describe('8-digit hex values, a as parameter (separate parameter should override alpha in hex)', function() {
     it('should calculate rgba values from hex and string alpha value', function() {
       assert.equal('rgba(17, 34, 51, 0.5)', hexToRgba('11223344', '0.5'));
     })

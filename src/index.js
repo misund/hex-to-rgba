@@ -23,13 +23,16 @@ const hexToRgba = function(hex, a) {
   const r = parseInt(newHex.substring(0, 2), 16);
   const g = parseInt(newHex.substring(2, 4), 16);
   const b = parseInt(newHex.substring(4, 6), 16);
-  let o = a;
 
+  let o;
   if ( newHex.length === 8) {
     o = +((parseInt(newHex.substring(6, 8), 16)/255).toFixed(2));
   }
+  o = isNumeric(a) ? a : o;
 
-  return !isNaN(parseFloat(o)) ? `rgba(${r}, ${g}, ${b}, ${o})` : `rgb(${r}, ${g}, ${b})`;
+  return isNumeric(o) ? `rgba(${r}, ${g}, ${b}, ${o})` : `rgb(${r}, ${g}, ${b})`;
 };
+
+const isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
 
 module.exports = hexToRgba;
