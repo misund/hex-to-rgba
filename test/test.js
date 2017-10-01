@@ -131,13 +131,13 @@ describe('hex-to-rgba', () => {
     });
   });
 
-  describe.skip('4-digit hex values, no a', () => {
+  describe('4-digit hex values, no a', () => {
     it('should calculate correct rgb values', () => {
       assert.equal('rgba(17, 34, 51, 0.27)', hexToRgba('1234'));
     });
 
     it('should ignore a leading hash sign', () => {
-      assert.equal('rgb(17, 34, 51, 0.27)', hexToRgba('#1234'));
+      assert.equal('rgba(17, 34, 51, 0.27)', hexToRgba('#1234'));
     });
 
     it('should handle the edge case where alpha value is 1', () => {
@@ -149,7 +149,7 @@ describe('hex-to-rgba', () => {
     });
   });
 
-  describe.skip('4-digit hex values, a as parameter (separate parameter should override alpha in hex)', () => {
+  describe('4-digit hex values, a as parameter (separate parameter should override alpha in hex)', () => {
     it('should calculate rgba values from hex and string alpha value', () => {
       assert.equal('rgba(17, 34, 51, 0.5)', hexToRgba('1234', '0.5'));
     });
