@@ -32,15 +32,8 @@ const isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
 const formatRgb = (decimalObject, parameterA) => {
   const { r, g, b, a: parsedA } = decimalObject;
   const a = isNumeric(parameterA) ? parameterA : parsedA;
-  console.log('parameterA', parameterA);
-  console.log('isNumeric(parameterA)', isNumeric(parameterA));
-  console.log('parsedA', parsedA);
-  console.log('a', a);
 
-  return a === 1 && !isNumeric(parameterA)
-    ? `rgb(${r}, ${g}, ${b})`
-    : `rgba(${r}, ${g}, ${b}, ${a})`
-  ;
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
 };
 
 /**

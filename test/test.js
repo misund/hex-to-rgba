@@ -5,19 +5,19 @@ import hexToRgba from '..';
 describe('hex-to-rgba', () => {
   describe('6-digit hex values, no a', () => {
     it('should calculate correct rgb values', () => {
-      assert.equal('rgb(17, 34, 51)', hexToRgba('112233'));
+      assert.equal('rgba(17, 34, 51, 1)', hexToRgba('112233'));
     });
 
     it('should ignore a leading hash sign', () => {
-      assert.equal('rgb(17, 34, 51)', hexToRgba('#112233'));
+      assert.equal('rgba(17, 34, 51, 1)', hexToRgba('#112233'));
     });
 
     it('should correctly calculate uppercase hex', () => {
-      assert.equal('rgb(127, 127, 127)', hexToRgba('#7F7F7F'));
+      assert.equal('rgba(127, 127, 127, 1)', hexToRgba('#7F7F7F'));
     });
 
     it('should correctly calculate lowercase hex', () => {
-      assert.equal('rgb(127, 127, 127)', hexToRgba('#7f7f7f'));
+      assert.equal('rgba(127, 127, 127, 1)', hexToRgba('#7f7f7f'));
     });
   });
 
@@ -49,11 +49,11 @@ describe('hex-to-rgba', () => {
 
   describe('3-digit hex values, no a', () => {
     it('should calculate correct rgb values', () => {
-      assert.equal('rgb(17, 34, 51)', hexToRgba('123'));
+      assert.equal('rgba(17, 34, 51, 1)', hexToRgba('123'));
     });
 
     it('should ignore a leading hash sign', () => {
-      assert.equal('rgb(17, 34, 51)', hexToRgba('#123'));
+      assert.equal('rgba(17, 34, 51, 1)', hexToRgba('#123'));
     });
   });
 
