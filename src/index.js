@@ -1,7 +1,10 @@
 const removeHash = hex => (hex.startsWith('#') ? hex.slice(1) : hex);
 
 const parseHex = (nakedHex) => {
-  const isShort = [3, 4].includes(nakedHex.length);
+  const isShort = (
+    3 === nakedHex.length
+    || 4 === nakedHex.length
+  );
 
   const twoDigitHexR = isShort ? `${nakedHex.slice(0, 1)}${nakedHex.slice(0, 1)}` : nakedHex.slice(0, 2);
   const twoDigitHexG = isShort ? `${nakedHex.slice(1, 2)}${nakedHex.slice(1, 2)}` : nakedHex.slice(2, 4);
