@@ -55,6 +55,7 @@ An rgba() string. (examples: `'rgba(11, 22, 33, 1)'`, `'rgba(11, 22, 33, 0.5)'`)
 **1.0.0**
   - BREAKING CHANGE: Always return rgba(); even if the color is completely opaque
   - Support 4-digit hexes
+  - Add typescript type declaration (props @gillchristian)
 **0.2.0**
   - Support 8-digit hexes
 **0.1.0**
