@@ -1,4 +1,4 @@
-const removeHash = hex => (hex.startsWith('#') ? hex.slice(1) : hex);
+const removeHash = hex => (hex.charAt(0) === '#' ? hex.slice(1) : hex);
 
 const parseHex = (nakedHex) => {
   const isShort = (
