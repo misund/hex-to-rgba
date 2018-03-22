@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/misund/hex-to-rgba.svg?branch=master)](https://travis-ci.org/misund/hex-to-rgba)
+[![Greenkeeper badge](https://badges.greenkeeper.io/misund/hex-to-rgba.svg)](https://greenkeeper.io/)
+
 
 `hex-to-rgba` turns an old-fashioned css hex color value string into an rgba() string.
 
@@ -7,8 +9,6 @@ Optionally pass in an alpha value. The passed alpha value will override any alph
 Supports 3-, 4-, 6- and 8-digit hex values with or without a leading hash.
 
 ## Installation
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/misund/hex-to-rgba.svg)](https://greenkeeper.io/)
 ```sh
 $ npm install --save hex-to-rgba
 ```
