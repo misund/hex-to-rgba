@@ -7,6 +7,8 @@ Optionally pass in an alpha value. The passed alpha value will override any alph
 Supports 3-, 4-, 6- and 8-digit hex values with or without a leading hash.
 
 ## Installation
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/misund/hex-to-rgba.svg)](https://greenkeeper.io/)
 ```sh
 $ npm install --save hex-to-rgba
 ```
