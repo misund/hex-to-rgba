@@ -5,8 +5,10 @@
   "main": "build/index.js",
   "scripts": {
     "build": "babel src -d build",
+    "lint": "eslint src",
+    "mocha": "mocha --compilers js:babel-core/register",
     "prepublish": "npm run build && npm test",
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"
+    "test": "npm run lint && npm run mocha"
   },
   "repository": {
     "type": "git",
