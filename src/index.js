@@ -2,8 +2,8 @@ const removeHash = hex => (hex.charAt(0) === '#' ? hex.slice(1) : hex);
 
 const parseHex = (nakedHex) => {
   const isShort = (
-    3 === nakedHex.length
-    || 4 === nakedHex.length
+    nakedHex.length === 3
+    || nakedHex.length === 4
   );
 
   const twoDigitHexR = isShort ? `${nakedHex.slice(0, 1)}${nakedHex.slice(0, 1)}` : nakedHex.slice(0, 2);
@@ -23,17 +23,21 @@ const parseHex = (nakedHex) => {
 
 const hexToDecimal = hex => parseInt(hex, 16);
 
-const hexesToDecimals = ({ r, g, b, a }) => ({
+const hexesToDecimals = ({
+  r, g, b, a,
+}) => ({
   r: hexToDecimal(r),
   g: hexToDecimal(g),
   b: hexToDecimal(b),
   a: +((hexToDecimal(a) / 255).toFixed(2)),
 });
 
-const isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n);
+const isNumeric = n => !isNaN(parseFloat(n)) && isFinite(n); // eslint-disable-line no-restricted-globals, max-len
 
 const formatRgb = (decimalObject, parameterA) => {
-  const { r, g, b, a: parsedA } = decimalObject;
+  const {
+    r, g, b, a: parsedA,
+  } = decimalObject;
   const a = isNumeric(parameterA) ? parameterA : parsedA;
 
   return `rgba(${r}, ${g}, ${b}, ${a})`;
