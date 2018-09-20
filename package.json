@@ -1,6 +1,6 @@
 {
   "name": "hex-to-rgba",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Converts hexadecimal color codes to rgb()/rgba() values.",
   "main": "build/index.js",
   "scripts": {
