@@ -12,10 +12,17 @@ Supports 3-, 4-, 6- and 8-digit hex values with or without a leading hash.
 ```sh
 $ npm install --save hex-to-rgba
 ```
+or
+```sh
+$ yarn add hex-to-rgba
+```
 
 ## Usage
 ```js
-var hexToRgba = require("hex-to-rgba");
+import hexToRgba from 'hex-to-rgba';
+
+// Or if you're so inclined:
+// var hexToRgba = require("hex-to-rgba");
 
 hexToRgba('112233'); // "rgba(17, 34, 51, 1)"
 hexToRgba('#112233'); // "rgba(17, 34, 51, 1)"
@@ -40,7 +47,7 @@ hexToRgba('#1234', 0.75) // "rgba(17, 34, 51, 0.75)"
 
 Testing
 ```
-npm run build && npm test
+yarn build && yarn test
 ```
 
 ## Signature

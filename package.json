@@ -7,8 +7,8 @@
     "build": "babel src -d build",
     "lint": "eslint src",
     "mocha": "mocha --compilers js:babel-core/register",
-    "prepublish": "npm run build && npm test",
-    "test": "npm run lint && npm run mocha"
+    "prepublish": "yarn build && yarn test",
+    "test": "yarn lint && yarn mocha"
   },
   "repository": {
     "type": "git",
