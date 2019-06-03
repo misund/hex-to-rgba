@@ -45,20 +45,29 @@ hexToRgba('1234', 0.5) // "rgba(17, 34, 51, 0.5)"
 hexToRgba('#1234', 0.75) // "rgba(17, 34, 51, 0.75)"
 ```
 
-Testing
-```
-yarn build && yarn test
-```
-
 ## Signature
 `hexToRgba(hex, a=1)`
+
+Returns an rgba() string. (examples: `'rgba(11, 22, 33, 1)'`, `'rgba(11, 22, 33, 0.5)'`)
 
 ## Parameters
 * `hex`: The hex color value to convert to rgba. (examples: `'123456'`, `'#123456'`, `'123'`, `'#123'`)
 * `a`: An alpha value to apply. (optional, default: 1) (examples: `'0.5'`, `0.25`)
 
-## Returns
-An rgba() string. (examples: `'rgba(11, 22, 33, 1)'`, `'rgba(11, 22, 33, 0.5)'`)
+
+## Contributing
+I appreciate your issues and PRs [on Github](https://github.com/misund/hex-to-rgba)!
+
+### Testing
+```
+yarn build && yarn test
+```
+
+### Releasing
+This project uses [np](https://github.com/sindresorhus/np).
+1. Make sure your changes are in master
+2. Run `yarn release`
+3. Follow the interactive release guide
 
 ## Changelog
 See the [releases page on GitHub](https://github.com/misund/hex-to-rgba/releases).
