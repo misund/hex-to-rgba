@@ -28,16 +28,16 @@
   },
   "homepage": "https://github.com/misund/hex-to-rgba#readme",
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/register": "^7.4.4",
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "@babel/register": "7.4.4",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.17.3",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.13.0",
-    "mocha": "^6.1.4",
+    "mocha": "6.1.4",
     "np": "5.0.2"
   }
 }
