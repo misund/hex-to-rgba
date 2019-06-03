@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src -d build",
     "lint": "eslint src",
-    "mocha": "mocha --compilers js:babel-core/register",
+    "mocha": "mocha --require babel-core/register",
     "prepublish": "yarn build && yarn test",
     "test": "yarn lint && yarn mocha"
   },
