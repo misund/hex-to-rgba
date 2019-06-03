@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src -d build",
     "lint": "eslint src",
-    "mocha": "mocha --require babel-core/register",
+    "mocha": "mocha --require @babel/register",
     "prepublish": "yarn build && yarn test",
     "test": "yarn lint && yarn mocha"
   },
@@ -27,9 +27,10 @@
   },
   "homepage": "https://github.com/misund/hex-to-rgba#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-register": "^6.26.0",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.17.3",
