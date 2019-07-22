@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/misund/hex-to-rgba.svg?branch=master)](https://travis-ci.org/misund/hex-to-rgba)
-[![Greenkeeper badge](https://badges.greenkeeper.io/misund/hex-to-rgba.svg)](https://greenkeeper.io/)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=misund/hex-to-rgba)](https://dependabot.com)
 
 
 `hex-to-rgba` turns an old-fashioned css hex color value string into an rgba() string.
