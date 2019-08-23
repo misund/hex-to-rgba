@@ -50,8 +50,12 @@ const formatRgb = (decimalObject, parameterA) => {
  *
  * If you specify an alpha value, you'll get a rgba() value instead.
  *
- * @param The hex value to convert. ('123456'. '#123456', ''123', '#123')
- * @param An alpha value to apply. (optional) ('0.5', '0.25')
+ * @param colorStr: The value to convert. ('123456', '#123456', ''123', '#123', rgb(0, 0, 0),
+ *  rgba(0, 1, 2, 1) )
+ * @param a: An alpha value to apply. (optional) ('0.5', '0.25')
+ * @param parseRgb: enable rgb and rgba string parsing. (optional) (true, false), false by default.
+ *  Useful in situations where the input value is unpredictable (hex or rgb), but you still need to
+ *  return an rgba string consistently.
  * @return An rgb or rgba value. ('rgb(11, 22, 33)'. 'rgba(11, 22, 33, 0.5)')
  */
 const hexToRgba = (colorStr, a, parseRgb = false) => {
