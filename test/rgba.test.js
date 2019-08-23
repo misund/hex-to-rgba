@@ -33,5 +33,12 @@ describe('rgba?-to-rgba', () => {
     it('should leave the alpha channel untouched if no alpha is given', () => {
       assert.equal('rgba(17, 34, 51, 0.5)', hexToRgba('rgba(17, 34, 51, 0.5)', undefined, true));
     });
+
+    it('should accept all valid rgb values', () => {
+      for (let i = 0; i <= 255; i++) { // eslint-disable-line no-plusplus
+        const result = hexToRgba(`rgba(${i}, ${i}, ${i}, 1)`, undefined, true);
+        assert.equal(result, `rgba(${i}, ${i}, ${i}, 1)`);
+      }
+    });
   });
 });
