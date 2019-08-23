@@ -5,10 +5,14 @@ class RgbParseError extends Error {
   }
 }
 
+// The long expressions are just to catch errors
 const RE_RGB = /^rgb\( *(?:(?:[01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]), *){2}(?:[01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]) *\)$/;
 const RE_RGBA = /^rgba\( *(?:(?:[01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]), *){3}(?:(?:0\.)?\d+) *\)$/;
 const RE_ALPHA = /(?:0\.)?\d+ *(?=\))/;
 const RE_NO_ALPHA = /\)/;
+const RE_IS_RGB = /^rgba?/;
+
+const isRgb = str => RE_IS_RGB.test(str);
 
 const rgbToRgba = (str, a) => {
   if (RE_RGB.test(str)) {
@@ -23,4 +27,4 @@ const rgbToRgba = (str, a) => {
   );
 };
 
-module.exports = { rgbToRgba, RgbParseError };
+module.exports = { isRgb, rgbToRgba, RgbParseError };

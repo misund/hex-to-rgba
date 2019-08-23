@@ -1,4 +1,4 @@
-import { rgbToRgba } from './rgb-parser';
+import { isRgb, rgbToRgba } from './rgb-parser';
 
 const removeHash = hex => (hex.charAt(0) === '#' ? hex.slice(1) : hex);
 
@@ -55,7 +55,7 @@ const formatRgb = (decimalObject, parameterA) => {
  * @return An rgb or rgba value. ('rgb(11, 22, 33)'. 'rgba(11, 22, 33, 0.5)')
  */
 const hexToRgba = (hex, a, parseRgb = false) => {
-  if (parseRgb) {
+  if (parseRgb && isRgb(hex)) {
     return rgbToRgba(hex, a);
   }
 
