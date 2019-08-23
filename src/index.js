@@ -1,3 +1,5 @@
+import { RgbParseError } from './error';
+
 const removeHash = hex => (hex.charAt(0) === '#' ? hex.slice(1) : hex);
 
 const parseHex = (nakedHex) => {
@@ -44,7 +46,7 @@ const formatRgb = (decimalObject, parameterA) => {
 };
 
 const RE_RGB = /^rgb\(\d{1,3}, *\d{1,3}, *\d{1,3}\)$/;
-const RE_RGBA = /^rgba\(\d{1,3}, *\d{1,3}, *\d{1,3}(?:, *(?:\d\.)?\d+)?\)$/;
+const RE_RGBA = /^rgba\(\d{1,3}, *\d{1,3}, *\d{1,3}(?:, *(?:\d\.)?\d+)\)$/;
 const RE_ALPHA = /(?:0\.)?\d+ *(?=\))/;
 const RE_NO_ALPHA = /\)/;
 
@@ -55,7 +57,7 @@ const rgbaToRgba = (str, alpha) => {
   if (RE_RGBA.test(str)) {
     return str.replace(RE_ALPHA, `${alpha}`);
   }
-  throw Error(`rgba string is invalid, must be in the form rgba?(num, num, num, num?), not: ${str}`);
+  throw new RgbParseError(`rgba? string is invalid, must be in the form rgba?(num, num, num, num?), not: ${str}`);
 };
 
 /**
