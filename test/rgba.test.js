@@ -22,6 +22,13 @@ describe('rgba?-to-rgba', () => {
     it('should default to 1 for alpha if no alpha is given', () => {
       assert.equal('rgba(17, 34, 51, 1)', hexToRgba('rgb(17, 34, 51)', undefined, true));
     });
+
+    it('should accept all valid rgb values', () => {
+      for (let i = 0; i <= 255; i++) { // eslint-disable-line no-plusplus
+        const result = hexToRgba(`rgb(${i}, ${i}, ${i})`, '1', true);
+        assert.equal(result, `rgba(${i}, ${i}, ${i}, 1)`);
+      }
+    });
   });
 
   describe('rgba parser', () => {
@@ -36,7 +43,7 @@ describe('rgba?-to-rgba', () => {
 
     it('should accept all valid rgb values', () => {
       for (let i = 0; i <= 255; i++) { // eslint-disable-line no-plusplus
-        const result = hexToRgba(`rgba(${i}, ${i}, ${i}, 1)`, undefined, true);
+        const result = hexToRgba(`rgba(${i}, ${i}, ${i}, 1)`, '1', true);
         assert.equal(result, `rgba(${i}, ${i}, ${i}, 1)`);
       }
     });
