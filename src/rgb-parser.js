@@ -16,12 +16,16 @@ const isRgb = str => RE_IS_RGB.test(str);
 
 const rgbToRgba = (str, a) => {
   if (RE_RGB.test(str)) {
-    const alpha = a !== undefined ? a : 1; // alpha, or default alpha
-    return str.replace(RE_NO_ALPHA, `, ${alpha})`).replace(/rgb\(/, 'rgba(');
+    if (a !== undefined) {
+      return str.replace(RE_NO_ALPHA, `, ${a})`).replace(/rgb\(/, 'rgba(');
+    }
+    return str;
   }
+
   if (RE_RGBA.test(str)) {
     return a !== undefined ? str.replace(RE_ALPHA, `${a}`) : str; // replace alpha if defined, otherwise don't
   }
+
   throw new RgbParseError(
     `rgba? string is invalid, must be in the form rgba?('0-255', '0-255', '0-255', '0-1'?), not: ${str}`,
   );

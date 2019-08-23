@@ -19,8 +19,8 @@ describe('rgba?-to-rgba', () => {
       assert.throws(callback, Error); // RgbParseError doesn't pass, even though it throws
     });
 
-    it('should default to 1 for alpha if no alpha is given', () => {
-      assert.equal('rgba(17, 34, 51, 1)', hexToRgba('rgb(17, 34, 51)', undefined, true));
+    it('should return the rgb string if "a" is undefined', () => {
+      assert.equal('rgb(17, 34, 51)', hexToRgba('rgb(17, 34, 51)', undefined, true));
     });
 
     it('should accept all valid rgb values', () => {
