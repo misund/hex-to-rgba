@@ -29,5 +29,9 @@ describe('rgba?-to-rgba', () => {
       const callback = () => hexToRgba('rgba(17, 34, 51)', undefined, true);
       assert.throws(callback, Error); // RgbParseError doesn't pass, even though it throws
     });
+
+    it('should leave the alpha channel untouched if no alpha is given', () => {
+      assert.equal('rgba(17, 34, 51, 0.5)', hexToRgba('rgba(17, 34, 51, 0.5)', undefined, true));
+    });
   });
 });
