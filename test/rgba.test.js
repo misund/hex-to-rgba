@@ -54,5 +54,12 @@ describe('rgba?-to-rgba', () => {
         assert.equal(result, `rgba(0, 0, 0, ${i})`);
       }
     });
+
+    it('should accept a mix of valid rgb and alpha values, when a is undefined', () => {
+      for (let i = 0; i <= 255; i++) { // eslint-disable-line no-plusplus
+        const result = hexToRgba(`rgba(${i}, ${i}, ${i}, ${i * 0.00392156862745098})`, undefined, true);
+        assert.equal(result, `rgba(${i}, ${i}, ${i}, ${i * 0.00392156862745098})`);
+      }
+    });
   });
 });
