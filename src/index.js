@@ -54,8 +54,8 @@ const formatRgb = (decimalObject, parameterA) => {
  * @param An alpha value to apply. (optional) ('0.5', '0.25')
  * @return An rgb or rgba value. ('rgb(11, 22, 33)'. 'rgba(11, 22, 33, 0.5)')
  */
-const hexToRgba = (hex, a, parseRgba = false) => {
-  if (parseRgba) {
+const hexToRgba = (hex, a, parseRgb = false) => {
+  if (parseRgb) {
     return rgbToRgba(hex, a);
   }
 
