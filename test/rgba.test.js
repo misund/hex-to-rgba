@@ -47,5 +47,12 @@ describe('rgba?-to-rgba', () => {
         assert.equal(result, `rgba(${i}, ${i}, ${i}, 1)`);
       }
     });
+
+    it('should accept at least all rgb-alpha values from 0.001 to 1, when a is undefined', () => {
+      for (let i = 0.001; i <= 1; i += 0.001) {
+        const result = hexToRgba(`rgba(0, 0, 0, ${i})`, undefined, true);
+        assert.equal(result, `rgba(0, 0, 0, ${i})`);
+      }
+    });
   });
 });
