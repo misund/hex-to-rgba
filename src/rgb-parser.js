@@ -18,7 +18,9 @@ const rgbToRgba = (str, a) => {
   if (RE_RGBA.test(str)) {
     return a !== undefined ? str.replace(RE_ALPHA, `${a}`) : str; // replace alpha if defined, otherwise don't
   }
-  throw new RgbParseError(`rgba? string is invalid, must be in the form rgba?(num, num, num, num?), not: ${str}`);
+  throw new RgbParseError(
+    `rgba? string is invalid, must be in the form rgba?('0-255', '0-255', '0-255', '0-1'?), not: ${str}`,
+  );
 };
 
 module.exports = { rgbToRgba, RgbParseError };
