@@ -50,12 +50,12 @@ const RE_RGBA = /^rgba\(\d{1,3}, *\d{1,3}, *\d{1,3}(?:, *(?:\d\.)?\d+)\)$/;
 const RE_ALPHA = /(?:0\.)?\d+ *(?=\))/;
 const RE_NO_ALPHA = /\)/;
 
-const rgbaToRgba = (str, alpha) => {
+const rgbaToRgba = (str, a = 1) => {
   if (RE_RGB.test(str)) {
-    return str.replace(RE_NO_ALPHA, `, ${alpha})`);
+    return str.replace(RE_NO_ALPHA, `, ${a})`).replace(/rgb\(/, 'rgba(');
   }
   if (RE_RGBA.test(str)) {
-    return str.replace(RE_ALPHA, `${alpha}`);
+    return str.replace(RE_ALPHA, `${a}`);
   }
   throw new RgbParseError(`rgba? string is invalid, must be in the form rgba?(num, num, num, num?), not: ${str}`);
 };
