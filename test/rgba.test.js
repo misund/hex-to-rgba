@@ -76,6 +76,7 @@ describe('rgba?-to-rgba', () => {
 
     it('should accept a mix of valid rgb and alpha values, when a is undefined', () => {
       for (let i = 0; i <= 255; i++) { // eslint-disable-line no-plusplus
+        // Magic number: 1/255 = 0.00392156862745098 - allows alpha to scale with RGB values, <= 1
         const result = hexToRgba(`rgba(${i}, ${i}, ${i}, ${i * 0.00392156862745098})`, undefined, true);
         assert.equal(result, `rgba(${i}, ${i}, ${i}, ${i * 0.00392156862745098})`);
       }
