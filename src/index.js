@@ -54,12 +54,12 @@ const formatRgb = (decimalObject, parameterA) => {
  * @param An alpha value to apply. (optional) ('0.5', '0.25')
  * @return An rgb or rgba value. ('rgb(11, 22, 33)'. 'rgba(11, 22, 33, 0.5)')
  */
-const hexToRgba = (hex, a, parseRgb = false) => {
-  if (parseRgb && isRgb(hex)) {
-    return rgbToRgba(hex, a);
+const hexToRgba = (colorStr, a, parseRgb = false) => {
+  if (parseRgb && isRgb(colorStr)) {
+    return rgbToRgba(colorStr, a);
   }
 
-  const hashlessHex = removeHash(hex);
+  const hashlessHex = removeHash(colorStr);
   const hexObject = parseHex(hashlessHex);
   const decimalObject = hexesToDecimals(hexObject);
 
