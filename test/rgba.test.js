@@ -9,7 +9,7 @@ describe('rgba?-to-rgba', () => {
     });
 
     it('should parse rgb strings when set to true', () => {
-      assert.equal('rgba(17, 34, 51, 0.5)', hexToRgba('rgb(17, 34, 51)', '0.5', true));
+      assert.equal('rgb(17, 34, 51, 0.5)', hexToRgba('rgb(17, 34, 51)', '0.5', true));
     });
   });
 });
