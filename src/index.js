@@ -1,4 +1,4 @@
-import rgbaToRgba from './rgb-parser';
+import { rgbToRgba } from './rgb-parser';
 
 const removeHash = hex => (hex.charAt(0) === '#' ? hex.slice(1) : hex);
 
@@ -56,7 +56,7 @@ const formatRgb = (decimalObject, parameterA) => {
  */
 const hexToRgba = (hex, a, parseRgba = false) => {
   if (parseRgba) {
-    return rgbaToRgba(hex, a);
+    return rgbToRgba(hex, a);
   }
 
   const hashlessHex = removeHash(hex);
