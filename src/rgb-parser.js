@@ -1,7 +1,7 @@
 import { RgbParseError } from './error';
 
 const RE_RGB = /^rgb\(\d{1,3}, *\d{1,3}, *\d{1,3}\)$/;
-const RE_RGBA = /^rgba\(\d{1,3}, *\d{1,3}, *\d{1,3}(?:, *(?:\d\.)?\d+)\)$/;
+const RE_RGBA = /^rgba\((?:(?:[01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5]), *){3}(?:(?:0\.)?\d+)\)$/;
 const RE_ALPHA = /(?:0\.)?\d+ *(?=\))/;
 const RE_NO_ALPHA = /\)/;
 

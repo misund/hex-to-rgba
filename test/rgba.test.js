@@ -61,5 +61,23 @@ describe('rgba?-to-rgba', () => {
         assert.equal(result, `rgba(${i}, ${i}, ${i}, ${i * 0.00392156862745098})`);
       }
     });
+
+    ['-1', '-2', '-100', '256', '257', '1000'].forEach((val) => {
+      describe(`given the invalid rgb value: ${val}`, () => {
+        [
+          `rgba(${val}, 0, 0, 1)`,
+          `rgba(0, ${val}, 0, 1)`,
+          `rgba(0, 0, ${val}, 1)`,
+          `rgba(0, ${val}, ${val}, 1)`,
+          `rgba(${val}, ${val}, 0, 1)`,
+          `rgba(${val}, ${val}, ${val}, 1)`,
+        ].forEach((rgbaStr) => {
+          it(`should throw for: ${rgbaStr}`, () => {
+            const callback = () => hexToRgba(rgbaStr, undefined, true);
+            assert.throws(callback, Error); // RgbParseError doesn't pass, even though it throws
+          });
+        });
+      });
+    });
   });
 });
