@@ -29,7 +29,7 @@
   "homepage": "https://github.com/misund/hex-to-rgba#readme",
   "devDependencies": {
     "@babel/cli": "7.7.0",
-    "@babel/core": "7.6.2",
+    "@babel/core": "7.7.2",
     "@babel/preset-env": "7.7.1",
     "@babel/register": "7.7.0",
     "eslint": "6.6.0",
