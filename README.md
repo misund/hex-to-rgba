@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/misund/hex-to-rgba.svg?branch=master)](https://travis-ci.org/misund/hex-to-rgba)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=misund/hex-to-rgba)](https://dependabot.com)
-
 
 `hex-to-rgba` turns an old-fashioned css hex color value string into an rgba() string.
 
@@ -65,7 +63,7 @@ yarn build && yarn test
 
 ### Releasing
 This project uses [np](https://github.com/sindresorhus/np).
-1. Make sure your changes are in master
+1. Make sure your changes are on main
 2. Run `yarn release`
 3. Follow the interactive release guide
 
