@@ -65,7 +65,7 @@ yarn build && yarn test
 
 ### Releasing
 This project uses [np](https://github.com/sindresorhus/np).
-1. Make sure your changes are in master
+1. Make sure your changes are on main
 2. Run `yarn release`
 3. Follow the interactive release guide
 
