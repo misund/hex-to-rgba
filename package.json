@@ -37,7 +37,7 @@
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "7.37.5",
-    "mocha": "11.7.4",
+    "mocha": "11.7.5",
     "np": "10.2.0"
   }
 }
