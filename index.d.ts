@@ -1,3 +1,3 @@
-declare function hexToRgba(color: string, alpha?: string | number): string;
+declare function hexToRgba(color: string, alpha?: string | number, parseRgb?: boolean): string;
 
 export = hexToRgba;
