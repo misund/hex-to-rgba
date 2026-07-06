@@ -3931,10 +3931,10 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
-np@11.2.1:
-  version "11.2.1"
-  resolved "https://registry.yarnpkg.com/np/-/np-11.2.1.tgz#371887c97c2bfe1235477702daa4d2fc951f37eb"
-  integrity sha512-OBvNC8ipTHzRNY44opIUxptDaI1NukIBxVvof2vvLe8XLfw87TyfOdR6/QYSQEMqtRSL0XkNj0N/6Bsn//S6Qg==
+np@11.2.2:
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/np/-/np-11.2.2.tgz#bab08faa1bb363b67fb27bc85cc18737aaf02d63"
+  integrity sha512-xUenmoodkCbegO6QL0bApryA2AWb4I6CSq6dyEDDQ5MeSdRTE/qY2DWsoQrD3xJdbK+r54wmDJuWPDpE7iKGSQ==
   dependencies:
     chalk "^5.6.2"
     chalk-template "^1.1.2"
